@@ -8,7 +8,7 @@ For now the project is in localhost, so you need to learn basic TypeScrypt (= Ja
 
 ### Prerequisites
 
-You need to set-up your environement 
+You need to set-up your environment 
 
 Starting with CLI. 
 
