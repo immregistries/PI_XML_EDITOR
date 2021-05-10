@@ -1,10 +1,10 @@
-# PI_XML_EDITOR
+# PI_XML_EDITO
 
 This project is a web xml editor. It's a project from a PI proposed by AIRA and the NIST to TELECOM NANCY in 2019-2020.
 
 ## Getting Started
 
-For now the project is in LocaHost, so you need to learn basic TypeScrypt (= JavaScrypt), HTML5, CSS and Angular to work on it
+For now the project is in localhost, so you need to learn basic TypeScrypt (= JavaScrypt), HTML5, CSS and Angular to work on it
 
 ### Prerequisites
 
