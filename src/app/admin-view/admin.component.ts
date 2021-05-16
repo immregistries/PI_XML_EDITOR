@@ -10,10 +10,10 @@ import { User } from '../services/user';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  private isAdmin:boolean;
-  private usersList:User[];
-  private noEmailUsersList:User[];
-  private adminsList:User[];
+  public isAdmin: boolean;
+  public usersList: User[];
+  public noEmailUsersList: User[];
+  public adminsList: User[];
 
   constructor(private db: AngularFirestore, private afAuth: AngularFireAuth) {
     this.isAdmin = false;

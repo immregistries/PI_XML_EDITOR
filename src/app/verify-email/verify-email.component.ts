@@ -7,7 +7,7 @@ import {AuthenticationService} from '../services/authentication.service'
 })
 export class VerifyEmailComponent implements OnInit {
 
-  constructor(protected authenticationService: AuthenticationService) { }
+  constructor(public authenticationService: AuthenticationService) { }
 
   ngOnInit() {
   }

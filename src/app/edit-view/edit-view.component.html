@@ -22,7 +22,7 @@
             </div>
             <!-- If we only edit a codeset -->
             <ng-template #codeNotSelectedBlock>
-              <button (click)="openDocu(event, myCodeset.label);"  class="btn btn-danger"> Go Back </button>
+              <button (click)="openDocu($event, myCodeset.label);"  class="btn btn-danger"> Go Back </button>
             </ng-template>
           </div>
           <!-- If we only add a codeset -->
@@ -75,7 +75,7 @@
               </tr>
             </ng-container>
 
-            <tr title="Display codes" *ngFor="let docu of documents" (click)="openDocu(event, docu.label)">
+            <tr title="Display codes" *ngFor="let docu of documents" (click)="openDocu($event, docu.label)">
               <div *ngIf="isDocumentDefined===true; then thenBlock else elseBlock"></div>
               <ng-template #thenBlock>
                 <td [ngClass]="{'table-primary': docu.label===myCodeset.label}">
