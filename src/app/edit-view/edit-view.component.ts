@@ -22,28 +22,28 @@ import { AlertService } from '../services/alert.service';
 })
 
 export class EditViewComponent implements OnInit {
-  protected xmlCollection:          AngularFirestoreCollection ;
-  protected codesetDocument:        AngularFirestoreDocument<Codeset>;
-  protected document$:              Observable<any[]>;
-  protected documents:              any[];
-  protected db:                     AngularFirestore;
-  protected codeset:                Observable<Codeset>;
-  protected isDocumentDefined:      boolean; 
-  protected myCodeset:              Codeset;  
-  protected myCode:                 Code;
-  protected isCodeSelected:         boolean;
-  protected codeToBeEdited:         Code;
-  protected isEditing:              boolean;
-  protected editReferenceCodeset:   Codeset;
-  protected editReferenceCodeValue: string;
-  protected codeToBeAdded:          Code;
-  protected addedCodes:             Code[];
-  protected codesetToBeAdded:       Codeset;
-  protected addedCodesets:          Codeset[];
-  protected canEdit:                boolean;
-  protected isAdmin:                boolean;
-  protected searchString:           string;
-  protected displayedCodes:         Code[];
+  protected xmlCollection: AngularFirestoreCollection;
+  protected codesetDocument: AngularFirestoreDocument<Codeset>;
+  protected document$: Observable<any[]>;
+  public documents: any[];
+  protected db: AngularFirestore;
+  protected codeset: Observable<Codeset>;
+  public isDocumentDefined: boolean;
+  public myCodeset: Codeset;
+  public myCode: Code;
+  public isCodeSelected: boolean;
+  public codeToBeEdited: Code;
+  public isEditing: boolean;
+  public editReferenceCodeset: Codeset;
+  public editReferenceCodeValue: string;
+  public codeToBeAdded: Code;
+  public addedCodes: Code[];
+  public codesetToBeAdded: Codeset;
+  public addedCodesets: Codeset[];
+  public canEdit: boolean;
+  public isAdmin: boolean;
+  public searchString: string;
+  public displayedCodes: Code[];
 
   constructor(db: AngularFirestore, protected afAuth: AngularFireAuth) {
     this.db = db;

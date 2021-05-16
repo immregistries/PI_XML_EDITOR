@@ -18,14 +18,14 @@ export class CommentaireComponent implements OnInit {
   protected SubCom : subComment[]
   protected Commentaire:    AngularFirestoreDocument<commentary>;
   protected document$:          Observable<any[]>;
-  protected commentaires:          commentary[];
+  public commentaires: commentary[];
   protected db:                 AngularFirestore;
   protected isDocumentDefined:  boolean; 
   protected myCommentaire:      commentary;
   protected isCodeSelected:     boolean;
   protected isEditing:          boolean;
   protected tmpPersonne:        User;
-  protected tmpMessage: String[];
+  public tmpMessage: string[];
   protected ListEditor : User[];
   ListEditorSub: User[];
   

@@ -11,7 +11,7 @@ import { commentary } from '../services/commentary';
 export class HomeComponent implements OnInit {
   protected numbersEdition:number;
   protected db: AngularFirestore;
-  protected showMore:boolean;
+  public showMore: boolean;
   constructor(db: AngularFirestore) { 
     this.db=db;
   }
