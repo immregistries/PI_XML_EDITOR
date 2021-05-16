@@ -17,7 +17,6 @@ export class commentary{
         let today = new Date();
         this.editTime = today;
         this.typeCom=typeCom;
-        // formatDate(today, 'dd-MM-yyyy hh:mm:ss a', 'en-US');
         this.xmlChange=xml;
         this.idUserPost=uid;
         this.whereChanged= new Array();

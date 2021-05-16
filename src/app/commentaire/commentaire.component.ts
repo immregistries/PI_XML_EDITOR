@@ -113,21 +113,21 @@ export class CommentaireComponent implements OnInit {
   }
 
     getDate(date:Date){
-      return(formatDate(date, 'dd-MM-yyyy hh:mm:ss a', 'en-US'))
+      return(formatDate(date, 'yyyy-MM-dd hh:mm:ss a', 'en-US'))
     }
     
     addNewCom(com:commentary,j){
       
       let newSubCom = new subComment(JSON.parse(localStorage.getItem('user')).uid,this.tmpMessage[j]);
       this.tmpMessage[j]="Write your comment"
-      this.db.collection(`Commentaire/${formatDate(com.editTime, 'dd-MM-yyyy hh:mm:ss a', 'en-US').concat(com.idUserPost).concat(com.xmlChange).concat(com.label)}/subComList`).add(JSON.parse(JSON.stringify(newSubCom)));     
+      this.db.collection(`Commentaire/${formatDate(com.editTime, 'yyyy-MM-dd hh:mm:ss a', 'en-US').concat(com.idUserPost).concat(com.xmlChange).concat(com.label)}/subComList`).add(JSON.parse(JSON.stringify(newSubCom)));
       com.showCom=true;
     }
   
     
   ShowMeComment(com:commentary){
     this.ListEditorSub = new Array();
-  this.SubComFire =  this.db.collection(`Commentaire/${formatDate(com.editTime, 'dd-MM-yyyy hh:mm:ss a', 'en-US').concat(com.idUserPost).concat(com.xmlChange).concat(com.label)}/subComList`);     
+    this.SubComFire = this.db.collection(`Commentaire/${formatDate(com.editTime, 'yyyy-MM-dd hh:mm:ss a', 'en-US').concat(com.idUserPost).concat(com.xmlChange).concat(com.label)}/subComList`);
   let doc =   this.SubComFire.valueChanges();
     doc.subscribe((list : subComment[])=>{this.SubCom=list;
     console.log(this.SubCom)
